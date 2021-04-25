@@ -22,7 +22,8 @@
             app:layout_constraintHeight_percent=".96"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
             app:layout_constraintWidth_percent=".9"
             app:srcCompat="@drawable/round_rect_shape" />
 
@@ -340,6 +341,20 @@
 
             </TableRow>
         </TableLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.98"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
