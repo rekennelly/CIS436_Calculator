@@ -11,8 +11,7 @@
         android:theme="@style/Theme.CIS436_Calculator">
 
         <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
