@@ -27,188 +27,213 @@
             app:layout_constraintWidth_percent=".9"
             app:srcCompat="@drawable/round_rect_shape" />
 
-        <TextView
-            android:id="@+id/screenTextView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/calcscreen"
-            android:fontFamily="@font/roboto_mono"
-            android:gravity="center_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent=".14"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/calculatorBody"
-            app:layout_constraintWidth_percent=".8" />
-
         <TableLayout
             android:id="@+id/buttonGrid"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
             android:stretchColumns="*"
+            android:weightSum="5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent=".72"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/screenTextView"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent=".8">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="20dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/screenTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_span="9"
+                    android:background="@drawable/calcscreen"
+                    android:fontFamily="@font/roboto_mono"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="8008135"
+                    android:textAlignment="textEnd"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent=".1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/calculatorBody"
+                    app:layout_constraintWidth_percent=".8"
+                    tools:ignore="RtlCompat" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
 
                 <Button
                     android:id="@+id/modBtn"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="0"
+                    android:layout_weight = "1"
                     android:background="@drawable/operatorbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/mod"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/oneBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="2"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/one"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/twoBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="4"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/two"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/threeBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="6"
+                    android:layout_weight="1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/three"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/divideBtn"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="8"
+                    android:layout_weight = "1"
                     android:background="@drawable/operatorbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/divide"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="20dp">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
 
                 <Button
                     android:id="@+id/sqrtBtn"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="0"
+                    android:layout_weight = "1"
                     android:background="@drawable/operatorbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/square_root"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/fourBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="2"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/four"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/fiveBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="4"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/five"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/sixBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="6"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/six"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/multiplyButton"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="8"
+                    android:layout_weight = "1"
                     android:background="@drawable/operatorbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/multiply"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="20dp">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
 
                 <Button
                     android:id="@+id/clearBtn"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="0"
+                    android:layout_weight = "1"
                     android:background="@drawable/settingbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
@@ -219,125 +244,132 @@
                 <Button
                     android:id="@+id/sevenBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="2"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/seven"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/eightBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="4"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/eight"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/nineBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="6"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/nine"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/minusButton"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="8"
+                    android:layout_weight = "1"
                     android:background="@drawable/operatorbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/minus"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/equalBtn"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="0"
+                    android:layout_weight = "1"
                     android:background="@drawable/settingbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/equals"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/pointBtn"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="2"
+                    android:layout_weight = "1"
                     android:background="@drawable/settingbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/decimal"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/plusMinusButton"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="4"
+                    android:layout_weight = "1"
                     android:background="@drawable/settingbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/plusminus"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/zeroBtn"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="6"
+                    android:layout_weight = "1"
                     android:background="@drawable/numberbtn"
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:padding="0dp"
                     android:text="@string/zero"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/addButton"
                     style="?android:attr/buttonBarStyle"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="8"
                     android:background="@drawable/operatorbtn"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:padding="0dp"
                     android:text="@string/plus"
                     android:textColor="@color/cream"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
             </TableRow>
         </TableLayout>
